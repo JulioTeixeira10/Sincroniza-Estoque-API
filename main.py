@@ -51,7 +51,7 @@ response = requests.request("POST", url, headers=headers, data=payload)
 
 resposta = response.text
 
-if (response.text.find("<ErrCod>")) > 0:
+if (response.text.find("<ErrCod>0")) == -1:
     with open("C:\\Bancamais\\Fastcommerce\\ProgramasExtras\\Sincronizações\\Sincroniza-Estoque\\Erro.txt", "w+") as e:
         e.write("Houve um erro ao checar os IDs.")
         e.write("\n")
